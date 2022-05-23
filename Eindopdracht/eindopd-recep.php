@@ -50,24 +50,24 @@
         <form class="d-flex justify-content-center mt-5" method="POST">
             <div class="form-group w-50 ">
                 <div class="mb-0 text-center h3">Wat is de hoofdstad van <?php echo $randomkey ?></div><br>
-                <div class="d-flex flex-row">
-                    <select name="capital" class="form-select mb-0">
+                <div style="position: relative;  " class="d-flex flex-row">
+                    <select style= "width: 250px; position: relative; left: 120px;" name="capital" class="form-select mb-0">
                         <?php foreach ($countries as $capital) { ?>
                             <option name="capital"><?php echo $capital; ?></option>;
                         <?php } ?>
                     </select>
-                    <a style="margin-left:1%; display: inline-block;" href="reset.php"><button class="btn btn-primary" type="button" name="reset">Reset</button></a>
+                    <a style="margin-left:1%; display: inline-block; position: relative; top: 60px; right: 140px; " href="reset.php"><button class="btn btn-primary" type="button" name="reset">Reset</button></a>
                 <input type="hidden" name="correctAnswer" value="<?php echo $correctAnswer; ?>">
 
                 <br>
                 <div class="d-flex flex-row">
-                    <button style="margin-right:1%; background-color: blue; position: relative; display: inline-block; top: 70px;" class="btn btn-success" type="submit" name="button">Check the answer</button><br>
-                    <span style="margin-right:1%;">Games: <?php echo $_SESSION['gamePlayed']; ?></span><br>
-                    <span style="margin-right:1%;">Won: <?php echo $_SESSION['correctAnswer']; ?></span><br>
-                    <span>Lost: <?php echo $_SESSION['wrongAnswer']; ?></span><br>
+                    <button style="margin-right:1%; background-color: blue; position: relative; display: inline-block; width: 50px; left: 70px;" class="btn btn-success" type="submit" name="button">OK</button><br>
+                    <span style="margin-right:1%; position: relative; top: 60px; right: 160px;">Games: <?php echo $_SESSION['gamePlayed']; ?></span><br>
+                    <span style="margin-right:1%; position: relative; top: 60px; right: 160px;">Won: <?php echo $_SESSION['correctAnswer']; ?></span><br>
+                    <span style="position: relative; top: 60px; right: 160px;">Lost: <?php echo $_SESSION['wrongAnswer']; ?></span><br>
                 </div>
 
-                <div class="text-left">
+                <div style="position: relative; " class="text-left">
                     <?php
                     if ($isIncorrect || $isCorrect) {
 
